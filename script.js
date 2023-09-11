@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Select elements
+
     const quoteElement = document.getElementById("quote-content");
     const authorElement = document.getElementById("quote-author");
     const newQuoteButton = document.getElementById("new-quote-btn");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const apiUrl = "https://type.fit/api/quotes";
 
-    // Function to fetch and display a random quote
+
     function fetchRandomQuote() {
         fetch(apiUrl)
             .then((response) => {
@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Function to display a quote and author
+  
     function displayQuote(quote, author) {
         quoteElement.textContent = quote;
         authorElement.textContent = author ? `- ${author}` : "";
     }
 
-    // Event listeners
+  
     window.addEventListener("load", fetchRandomQuote);
     newQuoteButton.addEventListener("click", fetchRandomQuote);
     
